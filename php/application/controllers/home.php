@@ -21,6 +21,8 @@ class Home extends CI_Controller {
     $params['key'] = $this->config->item('dropbox_key');
     $params['secret'] = $this->config->item('dropbox_secret');
 		$this->load->library('dropbox', $params);
+    print_r($params);
+    die;
 		$data = $this->dropbox->get_request_token(site_url("home/access_dropbox"));
 		$this->session->set_userdata('token_secret', $data['token_secret']);
 		redirect($data['redirect']);
