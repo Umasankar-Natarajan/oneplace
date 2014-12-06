@@ -112,6 +112,7 @@ class Dropbox
         print_r($str);
         echo "consumer_method";
         print_r($this->_consumer);
+        die;
         $response = $this->_connect($baseurl, $str, $this->_consumer['method']);
         
         echo "response";
