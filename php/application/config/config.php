@@ -357,6 +357,9 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = getenv('OPENSHIFT_HAPROXY_IP');
 
+$config['key']    = '9k2evihykldf1jv';
+$config['secret'] = 'uxiy4mt3jl9msjc';
+
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
