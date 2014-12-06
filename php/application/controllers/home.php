@@ -11,7 +11,8 @@ class Home extends CI_Controller {
   
 	public function index()
 	{
-		$this->load->view('home');
+     $data['baseurl'] = base_url();
+		$this->load->view('home',$data);
 	}
   
     // Call this method first by visiting http://SITE_URL/example/request_dropbox

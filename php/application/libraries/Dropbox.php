@@ -106,8 +106,17 @@ class Dropbox
             $str .= ",{$key}=\"{$value}\"";
         $str = 'Authorization: OAuth '.substr($str, 1);
         //Send it
+        echo "baseurl";
+        print_r($baseurl);
+        echo "str";
+        print_r($str);
+        echo "consumer_method";
+        print_r($this->_consumer);
         $response = $this->_connect($baseurl, $str, $this->_consumer['method']);
         
+        echo "response";
+        print_r($response);
+        die;
         //We should get back a request token and secret which
         //we will add to the redirect url.
         parse_str($response, $resarray);
